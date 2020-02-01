@@ -1,26 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './components/Home'
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import Profile from './components/Profile'
+import EditProfile from './components/EditProfile'
+import reAuth from './actions/reAuth'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super()
+  }
+  
+  componentDidMount(){
+   this.props.reAuth()
+}
+  
+
+  render(){
+    return(
+      <div>
+        
+       
+          <Switch>
+            
+          <Route exact path="/" component={Home}/>
+            {Object.keys(this.props.user.currentUser).length !== 0 ?  
+              <Fragment>
+                <Route exact path="/profile" component={Profile}/> 
+                <Route exact path="/profile/edit" component={EditProfile} />
+               
+                
+                </Fragment> 
+                        : 
+                <Fragment>
+                  
+                  <Route exact path="/login" component={Login}/>
+                  <Route exact path="/signup" component={SignUp}/>
+                 
+                </Fragment>}
+          </Switch>
+         
+              
+      </div>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps =(state)=> {
+  return {
+    
+    user: state.user
+    
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      reAuth: (a) => { dispatch(reAuth(a)) }
+  }
+}
+//   signUp: (event, userInput, history) => { dispatch(signUp(event, userInput, history)) }
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

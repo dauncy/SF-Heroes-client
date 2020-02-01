@@ -11,3 +11,198 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.Homepage{
+  
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  background-image: url("citywalk.jpeg");
+  background-size: 1440px 1024px;
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  Fill: Solid
+#000000
+}
+
+/* .mainnav{
+  display: block;
+  position: fixed;
+  opacity: 80%;
+  background-color: rgb(205, 207, 210);
+  width: 100%;
+  height: 5%;
+ 
+  z-index: 4;
+} */
+
+.header{
+  position:fixed;
+  width:100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  z-index: 4;
+}
+
+
+.header:before {
+  content:"";
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100px;
+ 
+  background-color: rgba(255, 255, 255, 0.7)
+}
+.header:after {
+  content:"";
+  position:absolute;
+  top:100%;
+  left: -2.35px;
+ 
+  border:15px solid rgba(255, 255, 255, 0.7);
+  border-bottom:5px solid transparent;
+  border-right:40px solid transparent;
+}
+
+.logo{
+  
+  Width: 56.41px;
+  Height: 49.09px;
+ 
+}
+
+.NavButton{
+  
+  
+}
+
+.rectangle-63{
+  position: absolute;
+  width: 84px;
+  height: 38px;
+  left: 577px;
+  top: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid black;
+  text-decoration: none;
+  font-family: Poppins;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.636364px;
+}
+
+.rectangle-64{
+  position: absolute;
+width: 84px;
+height: 38px;
+left: 681px;
+top: 16px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 1.5px solid black;
+text-decoration: none;
+  font-family: Poppins;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.636364px;
+
+
+}
+
+.rectangle-65{
+  position: absolute;
+  width: 84px;
+  height: 38px;
+  left: 779px;
+  top: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid black;
+  text-decoration: none;
+  font-family: Poppins;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.636364px;
+}
+
+
+
+.rectangle-67{
+  position: absolute;
+width: 84px;
+height: 38px;
+left: 573px;
+top: 12px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 1.5px solid black;
+
+}
+
+
+
+
+.rectangle-68{
+  position: absolute;
+width: 84px;
+height: 38px;
+left: 678px;
+top: 12px;
+border: 1.5px solid black;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle-69{
+  position: absolute;
+width: 84px;
+height: 38px;
+left: 775px;
+top: 12px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border: 1.5px solid black
+}
+
+.choice-container{
+  position: absolute;
+width: 549px;
+height: 375px;
+left: 439px;
+top: 327px;
+background: rgba(30, 26, 29, 0.7);
+border-radius: 20px;
+}
+
+.homepage-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 37%;
+  
+}
+
+.logo-name{
+ 
+
+}
+
+.quote{
+ 
+}
