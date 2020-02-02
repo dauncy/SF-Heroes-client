@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import EditProfile from './EditProfile'
-
+import MapContainer from '../containers/MapContainer'
 class Profile extends Component {
 
     handleClick =(event)=>{
@@ -13,6 +13,7 @@ class Profile extends Component {
             <div>
                 <center>
                      <h3>Welcome {this.props.user.currentUser.name}</h3>
+                     {/* <MapContainer/> */}
                         <button>Edit Profile</button>
                 </center>
             </div>

@@ -10,6 +10,7 @@ import EditProfile from './components/EditProfile'
 import reAuth from './actions/reAuth'
 import './App.css';
 
+
 class App extends Component{
   constructor(){
     super()
@@ -32,7 +33,7 @@ class App extends Component{
               <Fragment>
                 <Route exact path="/profile" component={Profile}/> 
                 <Route exact path="/profile/edit" component={EditProfile} />
-               
+                
                 
                 </Fragment> 
                         : 
@@ -60,7 +61,7 @@ const mapStateToProps =(state)=> {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      reAuth: (a) => { dispatch(reAuth(a)) }
+      reAuth: (history) => { dispatch(reAuth(history)) }
   }
 }
 //   signUp: (event, userInput, history) => { dispatch(signUp(event, userInput, history)) }
