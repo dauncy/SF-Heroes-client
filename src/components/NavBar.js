@@ -13,32 +13,36 @@ class NavBar extends Component{
 
         const loggedIn = !!this.props.user.id
         return(
-            <div className="mainnav">
+            
                 <div className="header">
                     <img src={GGB} className="logo"></img>
                 
                 {loggedIn ? 
                     <Fragment >
-                        <NavLink to='/profile' exact>Profile</NavLink> 
-                        <NavLink to="/" exact>Home</NavLink>
-                        <NavLink to="/" onClick={this.logOut}>Logout</NavLink>
+                         <div className="rectangle-68"></div>
+                        <NavLink to='/profile' exact className="rectangle-64">Profile</NavLink> 
+                        <div className="rectangle-67" ></div>
+                        <NavLink to="/" exact className="rectangle-63">Home</NavLink>
+                        <div className="rectangle-69"></div>
+                        <NavLink to="/" onClick={this.logOut} className="rectangle-65">Logout</NavLink>
                     </Fragment>
                     : 
                     <Fragment >
-                        
+                         
+                         <div className="rectangle-67" ></div>
                         <NavLink to="/" exact className="rectangle-63">Home</NavLink>
+                       
+                       
+                       
                         <div className="rectangle-68"></div>
-                       
-                       
                         
-                        <div className="rectangle-69"></div>
                         <NavLink to="/login" exact className="rectangle-64">Login</NavLink>
-                        <div className="rectangle-67" ></div>
+                        <div className="rectangle-69"></div>
                         <NavLink to='/signup' exact className="rectangle-65">Sign Up</NavLink>
                     </Fragment>
                  }
                  </div>
-            </div>
+           
         )
     }
 }

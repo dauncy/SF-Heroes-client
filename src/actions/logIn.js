@@ -14,15 +14,16 @@ const logIn = (event, userInput, history) => {
             })
          } )
          .then(response => response.json())
-         .then(json => {
+         .then(json => { console.log(json);
              if(json.error){
                 let message = document.getElementById("login-error")
                 message.innerText = json.error
              } else {
                 dispatch({ type: "SET_CURRENT_USER", user: json.user.data.attributes })
-                localStorage.setItem('jwt', json.jwt)
+                localStorage.setItem('jwt', json.jwt);
+                history.push('/profile')
              }
-         }).then(()=> {history.push('/profile')})
+         })
     }
 }
 

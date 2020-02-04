@@ -18,13 +18,14 @@ const signUp = (event, userInput, history) => {
             .then(json => { console.log(json);
                 if(json.error){
                     let message = document.getElementById("error")
-                    message.innerText = json.error
+                    message.innerText = json.error;
+                    
                 } else {
                     dispatch({ type: "SET_CURRENT_USER", user: json.user.data.attributes })
                     localStorage.setItem('jwt', json.jwt)
-                    
+                    this.props.history.push('/profile')
                 }
-            }).then(()=>{history.push("/profile")})
+            })
     }
 }
 
