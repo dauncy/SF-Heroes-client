@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import citywalk from '../citywalk.jpeg';
-import NavBar from './NavBar';
+
 import GGB from '../ggb.png'
 import {connect} from 'react-redux';
 
@@ -17,13 +16,13 @@ class Home extends Component{
         const loggedIn = !!this.props.user.id
     return(
         <div className="Homepage">
-            <NavBar/>
+            
             <div className="quote">
             
             </div>
             <div className="choice-container">
               
-                <p className="app-title">HOOD HEROES</p>
+                <p className="app-title">SF HEROES</p>
                 
                 <img className="homepage-logo" src={GGB}></img>
                 {loggedIn? 

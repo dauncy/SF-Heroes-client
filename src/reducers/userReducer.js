@@ -1,6 +1,7 @@
 const intitialState = {
     
-    currentUser: {}
+    currentUser: {},
+    userEvents: []
 }
 
 const userReducer = (state = intitialState, action) => {
@@ -19,6 +20,9 @@ const userReducer = (state = intitialState, action) => {
         
         case "DELET_PROFILE":
             return {...state, currentUser: {}}
+
+        case "SET_USER_EVENTS":
+            return{...state, userEvents: action.userEvents}
 
         default: 
         return state;

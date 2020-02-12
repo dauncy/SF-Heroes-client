@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import signUp from '../actions/signUp'
-import NavBar from './NavBar'
+
 class SignUp extends Component{
     constructor(){
         super()
@@ -27,11 +27,12 @@ class SignUp extends Component{
     render(){
         return(
             <div className="loginPage">
-                <NavBar/>
-                <h3 className="signup-title">Join The Community</h3>
-                <div className="signup-container">
+                
+               
+                
                 <center>
-                    
+                <div className="signup-container">
+                <h3 id="signupOops" className="signup-title">Join The Community</h3>
                         <form onSubmit={(event) => {this.props.signUp(event, this.state, this.props.history)}}
                         className="signup-form">
                             <label className="signup-label">Name</label>
@@ -39,7 +40,7 @@ class SignUp extends Component{
                             <br></br>
                             <input onChange={this.handleChange}
                                 name="name"
-                                type="name"
+                                type="text"
                                 value={this.state.name}
                                 placeholder="enter name"
                                 className="signup-input-2"
@@ -52,7 +53,7 @@ class SignUp extends Component{
                             <br></br>
                             <input onChange={this.handleChange}
                                 name="username"
-                                type="username"
+                                type="text"
                                 value={this.state.username}
                                 className="signup-input-2"
                                 placeholder="enter username"
@@ -86,14 +87,15 @@ class SignUp extends Component{
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                            <input className="signup-form-button" type="submit" value="Join"/>
+                            <input className="signup-form-button" type="submit" value="Become a Hero"/>
 
                         </form>
                         { 
-                        <h6 id="error" style={{color:"red"}}></h6>
-                        }       
+                        <h6 id="login-error" style={{color:"red"}}></h6>
+                        }  
+                         </div>     
                 </center>
-                </div>
+               
             </div>
         )
     }

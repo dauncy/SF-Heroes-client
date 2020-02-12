@@ -32,18 +32,22 @@ class Login extends Component{
     render(){
         return(
             <div className="loginPage">
-                <NavBar/>
+                {/* <NavBar/> */}
                 
-                <div className="choice-container">
+                <div className="login-container">
                     <center>
-                    <h3 className="login-title">Please Login</h3>
+                    { 
+                            <h3 id="login-title"className="login-title">Please Login</h3>
+                            }      
+                   
+                   
                             <form onSubmit={(event) => {this.props.logIn(event, this.state, this.props.history)}}
                             className="login-form">
                                 <label className="login-label-2">Username</label>
                                 <br></br><br></br>
                                 <input onChange={this.handleChange}
                                     name="username"
-                                    type="username"
+                                    type="text"
                                     value={this.state.username}
                                     className="login-input-1"
                                     placeholder="enter username"/>
@@ -59,9 +63,7 @@ class Login extends Component{
                                     <br></br><br></br>
                                 <input align="center" className='login-form-button' type="submit" value="Login"/>
                             </form>
-                            { 
-                            <h6 id="login-error" style={{color:"red"}}></h6>
-                            }       
+                           
                     </center>
                     </div>
                 </div>

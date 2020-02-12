@@ -1,3 +1,273 @@
+/** Black */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 900;
+  src: url("https://sf.abarba.me/SF-UI-Display-Black.otf");
+}
+
+/** Bold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 700;
+  src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+}
+
+/** Heavy */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 800;
+  src: url("https://sf.abarba.me/SF-UI-Display-Heavy.otf");
+}
+
+/** Light */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 200;
+  src: url("https://sf.abarba.me/SF-UI-Display-Light.otf");
+}
+
+/** Medium */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 500;
+  src: url("https://sf.abarba.me/SF-UI-Display-Medium.otf");
+}
+
+/** Regular */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+}
+
+/** Semibold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 600;
+  src: url("https://sf.abarba.me/SF-UI-Display-Semibold.otf");
+}
+
+/** Thin */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 300;
+  src: url("https://sf.abarba.me/SF-UI-Display-Thin.otf");
+}
+
+/** Ultralight */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 100;
+  src: url("https://sf.abarba.me/SF-UI-Display-Ultralight.otf");
+}
+
+/*---------------------------------------------------------------------------*
+ * SF UI Text
+ *---------------------------------------------------------------------------*/
+
+/** Bold */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 700;
+  src: url("https://sf.abarba.me/SF-UI-Text-Bold.otf");
+}
+
+/** Bold Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-BoldItalic.otf");
+}
+
+/** Heavy */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 800;
+  src: url("https://sf.abarba.me/SF-UI-Text-Heavy.otf");
+}
+
+/** Heavy Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 800;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf");
+}
+
+/** Light */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 200;
+  src: url("https://sf.abarba.me/SF-UI-Text-Light.otf");
+}
+
+/** Light Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 200;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-LightItalic.otf");
+}
+
+/** Medium */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 500;
+  src: url("https://sf.abarba.me/SF-UI-Text-Medium.otf");
+}
+
+/** Medium Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 500;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-MediumItalic.otf");
+}
+
+/** Regular */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
+}
+
+/** Regular Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-RegularItalic.otf");
+}
+
+/** Semibold */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 600;
+  src: url("https://sf.abarba.me/SF-UI-Text-Semibold.otf");
+}
+
+/** Semibold Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-SemiboldItalic.otf");
+}
+
+/** Ultrathin */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 100;
+  src: url("https://sf.abarba.me/SF-UI-Text-Ultrathin.otf");
+}
+
+/** Ultrathin Italic */
+@font-face {
+  font-family: "SF Text";
+  font-weight: 100;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf");
+}
+
+/*---------------------------------------------------------------------------*
+ * SF Mono
+ *---------------------------------------------------------------------------*/
+
+/** Bold */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 700;
+  src: url("https://sf.abarba.me/SFMono-Bold.otf");
+}
+
+/** Bold Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-BoldItalic.otf");
+}
+
+/** Heavy */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 800;
+  src: url("https://sf.abarba.me/SFMono-Heavy.otf");
+}
+
+/** Heavy Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 800;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-HeavyItalic.otf");
+}
+
+/** Light */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 200;
+  src: url("https://sf.abarba.me/SFMono-Light.otf");
+}
+
+/** Light Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 200;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-LightItalic.otf");
+}
+
+/** Medium */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 500;
+  src: url("https://sf.abarba.me/SFMono-Medium.otf");
+}
+
+/** Medium Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 500;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-MediumItalic.otf");
+}
+
+/** Regular */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SFMono-Regular.otf");
+}
+
+/** Regular Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-RegularItalic.otf");
+}
+
+/** Semibold */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 600;
+  src: url("https://sf.abarba.me/SFMono-Semibold.otf");
+}
+
+/** Semibold Italic */
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://sf.abarba.me/SFMono-SemiboldItalic.otf");
+}
+
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,43 +291,309 @@ html {
 
 .Homepage{
   
-  width: 100%;
-  height: 100%;
+ align-items: center;
   background-color: #000000;
-  background-image: url("citywalk.jpeg");
-  background-size: 1440px 1024px;
+  background-image: url("streets.jpeg");
+  
+  background-size: 100vw 100vh;
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
   Fill: Solid
 #000000
 }
+
+.profilePage{
+  background-color: #1E1A1D;
+  background-size: 100vw 100vh;
+  opacity: 0.9;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome{
+  text-align: center;
+  color: white;
+  font-family: "SF Display";
+  font-weight: 300;
+  font-style: none;
+  margin: auto;
+  padding-top: 6%;
+
+}
+
+.profile-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90vw;
+  height: 75vh;
+  background-color: rgba(16, 14, 15, 0.79);
+  
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 5%;
+  margin: auto;
+}
+
+.upcoming-events{
+  grid-column: 1;
+}
+
+.upcoming-title{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 800;
+  font-style: none;
+  text-align: center;
+}
+
+.no-events{
+  color: white;
+  font-family: "SF Text";
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+}
+.completedEvents{
+  grid-column: 2;
+}
+
+.settings{
+  grid-column: 3;
+}
+
+.settings-title{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 800;
+  font-style: none;
+  text-align: center;
+}
+
+.edit-button{
+  
+  background: rgb(13, 140, 220);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border-style: none;
+  
+  
+}
+
+.issuePage-button{
+  background: rgb(13, 140, 220);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border-style: none;
+}
+
+.add-button{
+  background: rgb(223, 170, 8);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border-style: none;
+}
+
+
+.add-button:hover{
+  background-color: rgb(206, 158, 15);
+}
+
+.issuePage-button:hover{
+  background-color: rgb(24, 114, 171)
+}
+.logout-button{
+  background: rgba(203, 195, 195, 0.7);
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border-style: none;
+}
+
+.logout-button:hover{
+  background-color: rgba(159, 155, 155, 0.7);
+}
+
+.search-events-button{
+  background: rgb(114, 240, 4);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  /* opacity: .7; */
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  font-weight: 700;
+  letter-spacing: .4px;
+  border-style: none;
+  
+}
+
+.search-events-button:hover{
+  background-color: rgb(87, 167, 17);
+}
+
+.edit-profile-page{
+  top: 30%;
+  /* border: solid 1px white;
+  width: 75%;
+  border-radius: 20px; */
+}
+
+.edit-title{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 500;
+  font-style: none;
+  text-align: center;
+}
+
+.delete-title{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 500;
+  font-style: none;
+  text-align: center;
+}
+
+.edit-label-1{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 200;
+}
+
+.edit-label-2{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 200;
+  
+}
+
+.edit-input{
+  border-radius: 15px;
+  border: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+}
+
+.updateButton{
+  background: rgb(13, 140, 220);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  margin-top: 5%;
+  border-style: none;
+}
+
+.deleteButton{
+  background: rgb(222, 16, 16);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+ 
+  border-style: none;
+}
+
+.deleteButton:hover{
+  background-color: rgb(193, 19, 19);
+}
+
+.delete-container{
+  position: relative;
+}
+.updateButton:hover{
+  background-color: rgb(24, 114, 171)
+}
+
+.edit-button:hover{
+  background-color: rgb(24, 114, 171);
+}
+.completed{
+  color: white;
+  font-family: "SF Display";
+  font-weight: 800;
+  font-style: none;
+  text-align: center;
+}
+
 .loginPage{
   width: 100%;
   height: 100%;
   background-color: #000000;
   background-image: url("streets.jpeg");
-  background-size: 100% 100%;
+  background-size: 100vw 100vh;
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 100vw;
+  height: 100vh;
   Fill: Solid
-#000000
+#000000;
 
 }
 
 .header{
   position:fixed;
+  grid-template-columns: 5% 5% 5% 5%;
   width:100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(203, 195, 195, 0.7);
   height: 60px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); */
   
   z-index: 4;
 }
 
-
-.header:before {
+.navItem-1{
+  grid-column: 2;
+}
+/* .header:before {
   content:"";
   position:absolute;
   top:100%;
@@ -75,12 +611,25 @@ html {
   border:15px solid rgba(255, 255, 255, 0.7);
   border-bottom:5px solid transparent;
   border-right:40px solid transparent;
+} */
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 39px solid transparent;
+  border-right: 84px solid transparent;
+  /* margin-top: 8px; */
+  left: 2%;
+  margin-top: -0.9%;
+  border-top: 27px solid rgba(203, 195, 195, 0.7);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .logo{
   
   Width: 56.41px;
   Height: 49.09px;
+  margin-top: 0.3%;
  
 }
 
@@ -93,12 +642,12 @@ html {
   position: absolute;
   width: 84px;
   height: 38px;
-  left: 577px;
+  left: 10vw;
   top: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1.5px solid black;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: "SF Display";
   color: black;
   font-style: normal;
   font-weight: 500;
@@ -106,6 +655,8 @@ html {
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.636364px;
+  margin: auto;
+  
 }
 
 .rectangle-63:hover{
@@ -127,12 +678,12 @@ html {
   position: absolute;
 width: 84px;
 height: 38px;
-left: 681px;
+left: 20vw;
 top: 16px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border: 1.5px solid black;
 text-decoration: none;
-  font-family: Poppins;
+  font-family: "SF Display";
   color: black;
   font-style: normal;
   font-weight: 500;
@@ -148,12 +699,12 @@ text-decoration: none;
   position: absolute;
   width: 84px;
   height: 38px;
-  left: 779px;
+  left: 30vw;
   top: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1.5px solid black;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: "SF Display";
   color: black;
   font-style: normal;
   font-weight: 500;
@@ -169,7 +720,7 @@ text-decoration: none;
   position: absolute;
 width: 84px;
 height: 38px;
-left: 573px;
+left: 10.5vw;
 top: 12px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border: 1.5px solid black;
@@ -183,7 +734,7 @@ border: 1.5px solid black;
   position: absolute;
 width: 84px;
 height: 38px;
-left: 678px;
+left: 20.5vw;
 top: 12px;
 border: 1.5px solid black;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -195,66 +746,115 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
 width: 84px;
 height: 38px;
-left: 775px;
+left: 30.5vw;
 top: 12px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border: 1.5px solid black
 }
 
 .choice-container {
+  display: grid;
+    align-items: center;
+    margin: auto;
+    width: 40vw;
+    height: 45vh;
+    grid-template-areas:
+        'title title title'
+        'login logo signup';
+    position: absolute;
+    top: -10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(30, 26, 29, 0.79);
+    border-radius: 20px;
+    min-width: 350px;
+}
+
+.login-container{
+  
+  
+  margin: auto;
+  width: 30vw;
+  height: 50vh;
+  min-width: 350px;
+  
   position: absolute;
-  width: 549px;
-  height: 386px;
-  left: 439px;
-  top: 20%;
+	top: -10%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+ 
   background: rgba(30, 26, 29, 0.79);
   border-radius: 20px;
+
 }
 
 .homepage-logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  
+ 
+ 
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 37%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    grid-area: logo;
+    padding: 10px;
+    box-sizing: border-box;
   
 }
 
 
 
 .login-button {
-  position: absolute;
-  bottom: 75px;
-  left: 40px;
+  
   background: #eee;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 8px;
-  opacity: .7;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .4px;
+    /* margin-left: auto; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    opacity: .7;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .4px;
+    font-family: "SF Display";
+    grid-area: login;
+    /* margin-left: auto; */
+    width: 90px;
+    height: 25%;
+    bottom: 25%;
+    /* text-align: center; */
+    margin: auto;
+    box-sizing: border-box;
 }
 
 .signup-button{
-  position: absolute;
-  bottom: 75px;
-  right: 40px;
+  
+  
   background: #eee;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 8px;
-  opacity: .7;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .4px;
+    /* margin-left: auto; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    opacity: .7;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .4px;
+    font-family: "SF Display";
+    grid-area: signup;
+    /* margin-left: auto; */
+    width: 90px;
+    height: 25%;
+    bottom: 25%;
+    /* text-align: center; */
+    margin: auto;
+    box-sizing: border-box;
+  
+  
 
 }
 
@@ -269,83 +869,78 @@ border: 1.5px solid black
 }
 
 .app-title{
-  font-family: Poppins;
+  font-family: "SF DIsplay";
   color: white;
-  position: absolute;
+ 
+  grid-area: title;
   font-weight: 800;
-  top: 5%;
-  right: 0;
-  left: 0;
+  
+    
   text-align: center;
-  font-size: 333%;
+  
+  font-size: 250%;
 }
 
 .login-title{
-
-  font-family: Poppins;
+  /* position: absolute; */
+  font-family: "SF Display";
   color: white;
-  position: absolute;
-  font-weight: 800;
-  top: 0%;
   right: 0;
   left: 0;
+  font-weight: 800;
+  
   text-align: center;
-  font-size: 333%;
+  font-size: 1.8vw;
+  grid-area: top;
   
 }
 
 .login-form{
-  position: absolute;
-  display: block;
-  bottom: 18%;
-  margin-right: auto;
-  margin-left: auto;
-  right: 0;
-  left: 0;
+  
 }
 
 .login-input-1 {
-  position: absolute;
+  /* position: absolute; */
   background: white;
-  margin-right: auto;
-  margin-left: auto;
-  right: 0;
   left: 0;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
   top: 0%;
-  width: 362.56px;
-  height: 40.73px;
+  width: 18vw;
+  height: 5vh;
   border-radius: 15px;
   padding-left: 5px;
   border: 0px;
+  
 }
 
 .login-input-2{
-  position: absolute;
+  /* position: absolute; */
   background: white;
   margin-right: auto;
   margin-left: auto;
   right: 0;
   left: 0;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
   
-  width: 362.56px;
-  height: 40.73px;
+  width: 18vw;
+  height: 5vh;
   border-radius: 15px;
   padding-left: 5px;
   border: 0px;
 }
 
 .login-label-1{
-  font-family: Roboto;
+  font-family: "SF Display";
 font-style: normal;
 font-weight: bold;
-font-size: 18px;
-line-height: 21px;
-letter-spacing: -0.378px;
-color: #FFFFFF;
-margin-right: 45%;
-margin-top: auto;
+font-size: 1.8vw;
+  line-height: 2.1vh;
+  letter-spacing: -0.011111117vw;
+  color: #FFFFFF;
+  text-align: left;
+  /* text-align: left; */
+  /* margin-right: 23vw; */
+/* position: absolute; */
 
 }
 
@@ -354,17 +949,20 @@ input, textarea, select, p, button {
 }
 
 .login-label-2{
-  position: absolute;
-  font-family: Roboto;
+  /* position: absolute; */
+  font-family: "SF Display";
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: -0.378px;
+  font-size: 1.8vw;
+  line-height: 2.1vh;
+  letter-spacing: -0.011111117vw;
   color: #FFFFFF;
-  right: 70%;
-  text-align: left;
-  top: -25%;
+  /* text-align: left; */
+  /* margin-right: 27vw; */
+  /* text-align: left; */
+  right: 0;
+  
+ 
   
 
 }
@@ -372,17 +970,21 @@ input, textarea, select, p, button {
 .login-form-button {
   position: absolute;
   background: #eee;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   border-radius: 8px;
   opacity: .7;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .4px;
-  bottom: -40%;
-  right: 38%;
+  text-align: center;
+  right:0;
+  left: 0;
+  margin: auto;
+  /* bottom: -8vh; */
+  font-family: "SF Display"
 }
 
 .login-form-button:hover{
@@ -391,17 +993,19 @@ input, textarea, select, p, button {
 }
 
 #login-error{
+  font-family: "SF Display";
   font-weight: 700;
   letter-spacing: .4px;
-  font-size: 100%;
+  font-size: 0.5vw;
+  bottom: 5%;
 }
 
 .signup-title{
-  font-family: Poppins;
+  font-family: "SF Display";
   color: white;
   position: absolute;
   font-weight: 800;
-  top: 8%;
+  top: -5%;
   right: 0;
   left: 0;
   text-align: center;
@@ -429,7 +1033,7 @@ input, textarea, select, p, button {
   right: 0;
   left: 0;
   margin-bottom: auto;
-  
+  font-family: "SF Display";
   width: 362.56px;
   height: 35px;
   border-radius: 15px;
@@ -439,7 +1043,7 @@ input, textarea, select, p, button {
 
 .signup-label{
   position: absolute;
-  font-family: Roboto;
+  font-family: "SF Display";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -461,21 +1065,40 @@ input, textarea, select, p, button {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
+  font-family: "SF Display";
   opacity: .7;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .4px;
   bottom: -30px;
-  left: 43%
+  left: 33.5%
   
 
 }
 
+input[type="text"]
+{
+    font-family: "SF Display";
+    font-weight: 300;
+    font-size: 110%;
+    padding-left: 1vw;
+}
+
+input[type="password"]
+{
+    font-family: "SF Display";
+    font-weight: 300;
+    font-size: 110%;
+    padding-left: 1vw;
+}
+
 .signup-container{
   position: absolute;
-  width: 549px;
-  height: 420px;
-  left: 439px;
+  width: 40vw;
+  margin: auto;
+  height: 75vh;
+  left: 0;
+  right: 0;
   top: 20%;
   background: rgba(30, 26, 29, 0.79);
   border-radius: 20px;
@@ -484,4 +1107,249 @@ input, textarea, select, p, button {
 .signup-form-button:hover{
   background-color: white;
   opacity: 1
+}
+
+.mapList{
+  font-size: 350%;
+  position: absolute;
+  left: 65%;
+    top: 0;
+}
+
+/* .map{
+  width: 75%;
+} */
+
+.map-parent{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  background-color: #f8f8ff;
+  width: 100vw;
+  height: 100vh;
+ padding-top: 60px;
+ 
+}
+
+.filter{
+ background-color: #f8f8ff;
+ 
+}
+
+#root > div > div > div:nth-child(2) > div > div.map > div > div:nth-child(1){
+  width: 75%;
+}
+
+.status-filter{
+  margin: 0; 
+  padding: 0; 
+  margin-bottom: 1.25em; 
+  padding: .125em;
+}
+
+.status-filter legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  margin-left: 20px; 
+  font-size: 100%; 
+  color: black; 
+} 
+
+.checkbox{
+  float: right;
+  margin-right: 20px;
+  
+}
+
+
+
+
+
+
+.checkbox-label{
+  font-size: 110%;
+  font-weight: 200;
+  font-family: "SF Display";
+}
+
+
+.dropdown-div{
+  text-align: center;
+  
+}
+
+.dropdown{
+  text-align: center;
+  display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 75%;
+	max-width: 100%;
+	box-sizing: border-box;
+  margin: 0;
+  margin-top: 5%;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-right: auto
+}
+
+.dropdown::-ms-expand {
+	display: none;
+}
+.dropdown:hover {
+	border-color: #888;
+}
+.dropdown:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.dropdown option {
+	font-weight:normal;
+}
+
+.status-title{
+  text-align: center;
+  font-size: 110%;
+  font-family: "SF Display";
+}
+
+.status{
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  display: inline-block;
+  text-align: center;
+  margin-right: auto;
+  
+
+}
+
+.status-label{
+  display: inline-block;
+  margin-right: 42%;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 125%;
+  font-weight: 200;
+  font-family: "SF Display";
+}
+
+#statusly{
+  float: left;
+  margin-left: 42%
+}
+
+.search-button{
+  position: absolute;
+  background: rgb(114, 240, 4);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  opacity: .7;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .4px;
+  margin-left:8%
+  
+}
+
+.search-button:hover{
+  opacity: 1;
+}
+
+.infoWindowGrid{
+  display: grid;
+  grid-template-areas:
+  'img title'
+  'img page'
+  'img que'
+  'details details'
+  'address address'
+  'date date'
+  'status status';
+  grid-template-columns: 1fr 1fr;
+  max-width: 300px;
+}
+
+
+.issue-mediaUrl{
+   grid-area: img;
+   
+    height: 125px;
+    object-fit: cover;
+    left: 0;
+  
+    margin: auto;
+    
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.issue-title{
+  grid-area: title;
+  /* position: absolute; */
+  text-align: center;
+  font-family: "SF Display";
+  font-size: 110%;
+  right: 25%;
+  top: 0;
+  box-sizing: border-box;
+  
+}
+
+.issue-details{
+  grid-area: details;
+  position: relative;
+  font-family: "SF Display";
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.sort-by{
+  font-family: "SF Display";
+  font-size: 110%;
+  box-sizing: border-box;
+}
+.issue-status{
+  font-family: "SF Display";
+  font-weight: 500;
+  grid-area: status;
+  box-sizing: border-box;
+}
+
+.issue-address{
+  font-family: "SF Display";
+  font-weight: 500;
+  grid-area: address;
+  box-sizing: border-box;
+}
+
+.issue-date{
+  font-family: "SF Display";
+  font-weight: 500;
+  grid-area: date;
+  box-sizing: border-box;
+}
+
+.issue-page-image{
+  background-size: cover;
+  height: 500px;
+  width: 500px;
 }

@@ -14,12 +14,20 @@ class EditProfile extends Component {
             old_username: ""
         }
     }
-    
     componentDidMount(){
         const user_id = this.props.user.currentUser.id
         const old_name = this.props.user.currentUser.name
         const old_username = this.props.user.currentUser.username
         this.setState({id: user_id, old_name: old_name, old_username: old_username})
+
+    }
+
+    componentDidUpdate(previousProps){
+        if(previousProps.user.currentUser !== this.props.user.currentUser){
+        const user_id = this.props.user.currentUser.id
+        const old_name = this.props.user.currentUser.name
+        const old_username = this.props.user.currentUser.username
+        this.setState({id: user_id, old_name: old_name, old_username: old_username})}
     }
     
     handleChange =(event)=>{
@@ -31,31 +39,38 @@ class EditProfile extends Component {
     render(){
         
         return(
-            <div>
+            <div className="edit-profile-page">
                 <center>
-                    <h3>Update Some Info</h3>
+                    <h3 className="edit-title">Update Some Info</h3>
                         <form onSubmit={(event) => {this.props.editProfile(event, this.state, this.props.history)}}>
-                            <label>New Username?</label>
+                            <label className="edit-label-1">Username Change?</label>
                             <br></br>
                             <input onChange={this.handleChange}
                                 type="username"
                                 name="username"
-                                value={this.state.username}/>
+                                value={this.state.username}
+                                placeholder="new username"
+                                className="edit-input"/>
                                 <br></br>
-                            <label>Name Change?</label>
+                                <br></br>
+                            <label className="edit-label-2">Name Change?</label>
                             <br></br>
                             <input onChange={this.handleChange}
+                                className="edit-input"
                                 type="name"
                                 name="name"
-                                value={this.state.name}/>
+                                value={this.state.name}
+                                placeholder="new name"/>
+
                                 <br></br>
-                            <input type="submit" value="update info"/>
+                            <input className="updateButton" type="submit" value="update info"/>
                         </form>
                         <p id="edit-error"></p>
-                        <br></br>
-                        <br></br>
-                        <h6>Changed your mind about helping?</h6>
-                        <button onClick={() => {this.props.deleteProfile( this.state.id, this.props.history)}}>Delete Account</button>
+                        
+                        <div className="delete-container">
+                        <h5 className="delete-title">Become a Villain :(</h5>
+                        <button className="deleteButton" onClick={() => {this.props.deleteProfile( this.state.id, this.props.history)}}>Delete Account</button>
+                        </div>
                 </center>
             </div>
         )

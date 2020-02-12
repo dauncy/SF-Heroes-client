@@ -20,7 +20,7 @@ const reAuth =(history)=>{
           }
         }).then(json => { if(json.user !== undefined){
             dispatch({type: "RE_AUTH", user: json.user.data.attributes})
-           
+            dispatch({type: "SET_USER_EVENTS", userEvents: json.user.data.relationships.community_events.data})
         } else{console.log("sup bro")}})
         
         .catch((error) => {

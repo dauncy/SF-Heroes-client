@@ -35,10 +35,10 @@ const editProfile = (event, userInput, history) => {
                     message.innerText = json.error
                 } else {
                     dispatch({ type: "EDIT_PROFILE", user: json.user.data.attributes })
-                    
+                    history.push('/profile')
                     
                 }
-            }).then(()=>{history.push("/profile")})
+            })
     }
 }
 

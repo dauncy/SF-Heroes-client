@@ -1,9 +1,10 @@
 import userReducer from './userReducer';
-import loadingReducer from './loadingReducer'
+import mapReducer from './mapReducer';
+import loadingReducer from './loadingReducer';
 import { combineReducers } from 'redux';
 
 
-const rootReducer = combineReducers({user: userReducer}) 
+const rootReducer = combineReducers({user: userReducer, map: mapReducer}) 
     
 
 export default rootReducer;

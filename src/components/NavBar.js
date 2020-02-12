@@ -4,10 +4,6 @@ import { NavLink } from 'react-router-dom';
 import GGB from '../ggb.png'
 
 class NavBar extends Component{
-    logOut = () => {
-        localStorage.removeItem('jwt')
-        this.props.clearCurrentUser()
-      }
     
     render(){
 
@@ -15,30 +11,42 @@ class NavBar extends Component{
         return(
             
                 <div className="header">
+                   
                     <img src={GGB} className="logo"></img>
-                
+                    
                 {loggedIn ? 
                     <Fragment >
-                         <div className="rectangle-68"></div>
-                        <NavLink to='/profile' exact className="rectangle-64">Profile</NavLink> 
-                        <div className="rectangle-67" ></div>
-                        <NavLink to="/" exact className="rectangle-63">Home</NavLink>
-                        <div className="rectangle-69"></div>
-                        <NavLink to="/" onClick={this.logOut} className="rectangle-65">Logout</NavLink>
+                        <div className="navItem-1">
+                            <div className="rectangle-68"></div>
+                            <NavLink to='/profile' exact className="rectangle-64">Profile</NavLink> 
+                        </div>
+
+                        <div className="navItem-2">
+                            <div className="rectangle-67" ></div>
+                            <NavLink to="/" exact className="rectangle-63">Home</NavLink>
+                        </div>
+
+                        <div className="navItem-3">
+                            <div className="rectangle-69"></div>
+                            <NavLink to="/map" className="rectangle-65">Map</NavLink>
+                        </div>
                     </Fragment>
                     : 
                     <Fragment >
-                         
-                         <div className="rectangle-67" ></div>
-                        <NavLink to="/" exact className="rectangle-63">Home</NavLink>
+                         <div className="navItem-1">
+                            <div className="rectangle-67" ></div>
+                            <NavLink to="/" exact className="rectangle-63">Home</NavLink>
+                        </div>
                        
-                       
-                       
-                        <div className="rectangle-68"></div>
-                        
-                        <NavLink to="/login" exact className="rectangle-64">Login</NavLink>
-                        <div className="rectangle-69"></div>
-                        <NavLink to='/signup' exact className="rectangle-65">Sign Up</NavLink>
+                       <div className="navItem-2">
+                            <div className="rectangle-68"></div>
+                            <NavLink to="/login" exact className="rectangle-64">Login</NavLink>
+                       </div>
+
+                       <div className="navItem-3">
+                            <div className="rectangle-69"></div>
+                            <NavLink to='/signup' exact className="rectangle-65">Sign Up</NavLink>
+                       </div>
                     </Fragment>
                  }
                  </div>

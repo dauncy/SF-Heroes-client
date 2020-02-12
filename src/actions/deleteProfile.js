@@ -19,3 +19,4 @@ const deleteProfile = ( userId, history) => {
 }
 
 export default deleteProfile
+
