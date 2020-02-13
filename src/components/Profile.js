@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import EditProfile from './EditProfile';
 import UserEvent from './UserEvent'
+import completeEvent from '../actions/completeEvent';
 
 class Profile extends Component {
 
@@ -45,7 +46,7 @@ class Profile extends Component {
                         <div>
                             {acceptedArray.length === 0? 
                                 <h4 className="no-events">Looks like you have no upcoming events..</h4> :
-                                    acceptedArray.map(issue => <UserEvent data={issue}/>)}
+                                    acceptedArray.map(issue => <UserEvent history={this.props.history} user={this.props.user} completeEvent={this.props.completeEvent} data={issue}/>)}
                            
                         </div>
                     </div>
@@ -93,7 +94,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        clearCurrentUser: () => dispatch({ type: "CLEAR_CURRENT_USER" })
+        clearCurrentUser: () => dispatch({ type: "CLEAR_CURRENT_USER" }),
+        completeEvent: (event, data, history) =>  {dispatch(completeEvent(event, data, history))} 
 
     }
 }

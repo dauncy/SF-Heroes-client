@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import InfoWindowEx  from '../components/InfoWindowEx.js'
-import apiKey from '../noLook'
+
 const mapStyles = {
   width: '100%',
   height: '100%'
@@ -116,8 +116,8 @@ class TheMap extends Component {
         <h4 >{this.state.selectedPlace.name}</h4>
         <button className="issuePage-button" onClick={this.handleClick}>Issue Page</button>
         <br></br>
-        <br></br>{this.props.userEvents.filter(issue => issue.id === this.state.selectedPlace.slugId).length===1 ? <p className="already">already addedd</p> : 
-            <button id="addButton" onClick={this.addIssue} className="add-button">Add to Que</button> }
+        <br></br>{this.props.userEvents.filter(issue => issue.id === this.state.selectedPlace.slugId).length===1 && this.state.selectedPlace.status === "Accepted" ? <p className="already">already addedd</p> : 
+            this.state.selectedPlace.status === "Closed" ? <p className="already">already completed</p> : <button id="addButton" onClick={this.addIssue} className="add-button">Add to Que</button> }
         </div>
          <p className="issue-details">{this.state.selectedPlace.serviceDetails && this.state.selectedPlace.serviceDetails.replace(/_/g, " ")}</p>
           <p className="issue-status">Status: {this.state.selectedPlace.status}</p>
@@ -135,7 +135,7 @@ class TheMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: apiKey
+  apiKey: ''
 })(TheMap);
 
 

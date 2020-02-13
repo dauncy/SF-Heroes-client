@@ -17,7 +17,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
-/src/noLook.js
+noLook.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env
