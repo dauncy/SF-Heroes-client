@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import InfoWindowEx  from '../components/InfoWindowEx.js'
-
+import apiKey from '../noLook'
 const mapStyles = {
   width: '100%',
   height: '100%'
@@ -51,9 +51,27 @@ class TheMap extends Component {
     this.props.history.push(`/issues/${slugId}`)
   }
   
+  addIssue =(event)=>{
+    let issueData = {
+      user_id: this.props.user.id,
+      community_event_id: this.state.selectedPlace.slugId
+    }
+
+    this.props.addIssue(event, issueData, this.props.history)
+  }
+  
   
 
   render() {
+
+    const status = {
+      Accepted: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+      Closed: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+      Open: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+        
+    }
+    
+
     return (
     
       <Map
@@ -69,6 +87,7 @@ class TheMap extends Component {
         >
           {this.props.data && this.props.data[0].map(object => 
          
+       
           <Marker 
           onClick={this.onMarkerClick}
             position={{lat: object["latitude"],
@@ -81,9 +100,11 @@ class TheMap extends Component {
                       serviceDetails={object.service_details}
                       complaintDate={object.created_at}
                       slugId={object.id}
+                    icon={status[`${object.status}`]}
+                              
 
                       
-            />)}
+          />)}
              <InfoWindowEx
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -95,8 +116,8 @@ class TheMap extends Component {
         <h4 >{this.state.selectedPlace.name}</h4>
         <button className="issuePage-button" onClick={this.handleClick}>Issue Page</button>
         <br></br>
-        <br></br>
-        <button className="add-button">Add to Que</button>
+        <br></br>{this.props.userEvents.filter(issue => issue.id === this.state.selectedPlace.slugId).length===1 ? <p className="already">already addedd</p> : 
+            <button id="addButton" onClick={this.addIssue} className="add-button">Add to Que</button> }
         </div>
          <p className="issue-details">{this.state.selectedPlace.serviceDetails && this.state.selectedPlace.serviceDetails.replace(/_/g, " ")}</p>
           <p className="issue-status">Status: {this.state.selectedPlace.status}</p>
@@ -114,5 +135,7 @@ class TheMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ''
+  apiKey: apiKey
 })(TheMap);
+
+

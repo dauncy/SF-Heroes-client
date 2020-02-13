@@ -29,33 +29,37 @@ class Profile extends Component {
     
 
     render(){
-        console.log(this.props)
+        let acceptedArray = this.props.events.filter(issue => issue.status ==="Accepted") || [ ]
+        let completedArray= this.props.events.filter(issue => issue.status === "Closed") || [ ]
         return(
             <div className="profilePage">
                 <div>
                  <h2 className="welcome">Welcome {this.props.user.name}</h2>
                  </div>
                 <div className="profile-container">
-               
+                <h3 className="upcoming-title">Upcoming</h3>
+                <h3 className="completed">Completed</h3>
+                <h3 className="settings-title">Settings</h3>
                     <div className="upcomingEvents">
-                        <h3 className="upcoming-title">Upcoming</h3>
+                        
                         <div>
-                            {this.props.events.filter(event => event.status=="Accepted").length === 0? 
+                            {acceptedArray.length === 0? 
                                 <h4 className="no-events">Looks like you have no upcoming events..</h4> :
-                                    this.props.events.map((event) => <UserEvent data={event}/>) }
+                                    acceptedArray.map(issue => <UserEvent data={issue}/>)}
                            
                         </div>
                     </div>
                     <div className="completedEvents">
-                        <h3 className="completed">Completed</h3>
+                        
                         <div>
-                        {this.props.events.filter(event => event.status=="Closed").length === 0? 
+                            
+                        {completedArray.length === 0 ?
                                 <h4 className="no-events">Looks like you have no completed events..</h4> :
-                                     this.props.events.map((event) => <UserEvent data={event}/>) }
+                                completedArray.map(issue => <UserEvent data={issue}/>) }
                         </div>
                     </div>
                     <div className="settings">
-                        <h3 className="settings-title">Settings</h3>
+                        
                         <center>
                         <button className="search-events-button" onClick={this.searchEvents}>Search Events</button>
                         <br></br>

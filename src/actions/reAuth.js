@@ -19,8 +19,9 @@ const reAuth =(history)=>{
           return window.alert("Oh my. Something has gone terribly wrong.")
           }
         }).then(json => { if(json.user !== undefined){
+          console.log(json.user.included)
             dispatch({type: "RE_AUTH", user: json.user.data.attributes})
-            dispatch({type: "SET_USER_EVENTS", userEvents: json.user.data.relationships.community_events.data})
+            dispatch({type: "SET_USER_EVENTS", userEvents: json.user.included.map(issue => issue.attributes)})
         } else{console.log("sup bro")}})
         
         .catch((error) => {

@@ -23,7 +23,8 @@ const userReducer = (state = intitialState, action) => {
 
         case "SET_USER_EVENTS":
             return{...state, userEvents: action.userEvents}
-
+        
+        
         default: 
         return state;
     }

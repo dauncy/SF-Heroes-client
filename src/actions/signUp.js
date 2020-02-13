@@ -26,7 +26,7 @@ const signUp = (event, userInput, history) => {
                     
                 } else {
                     dispatch({ type: "SET_CURRENT_USER", user: json.user.data.attributes })
-                    dispatch({type: "SET_USER_EVENTS", userEvents: json.user.data.relationships.community_events.data})
+                    dispatch({type: "SET_USER_EVENTS", userEvents: json.user.included.map(issue => issue.attributes)})
                     localStorage.setItem('jwt', json.jwt)
                     history.push('/profile')
                 }
