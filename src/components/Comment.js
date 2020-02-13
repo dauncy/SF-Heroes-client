@@ -9,9 +9,12 @@ class Comment extends Component{
     }
 
     render(){
+        console.log(this.props.data)
         return(
-            <div>
-    <p>{this.props.data.user.username}:   {this.props.data.content}</p>
+            <div className="comment-card">
+                <h6 className="comment-username">{this.props.data.user.username}:</h6>
+                <p className="comment-content">{this.props.data.content}</p>
+    
             </div>
         )
     }

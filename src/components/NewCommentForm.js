@@ -35,22 +35,26 @@ class NewCommentForm extends Component{
 
     render(){
         return(
-            <div>
-                <center>
-                <form onSubmit ={this.handleSubmit}>
-                    <label>Post a Comment</label>
-                    <br></br>
+           
+           
+                <form onSubmit ={this.handleSubmit}
+                className="post-container">
+                   
+                    
                     <textarea
                         value={this.state.content}
                         onChange={this.handleChange}
-                        placeholder="share your concerns"/>
-
-                        <br></br>
+                        placeholder="share your thoughts"
+                        className="comment-input"/>
+                        
+                    <div>
                     <input
+                    className="post"
                         type="submit" value="POST"/>
+                        </div>
                 </form>
-                </center>
-            </div>
+               
+           
         )
     }
 }

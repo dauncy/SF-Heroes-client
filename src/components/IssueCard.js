@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import NewCommentForm from './NewCommentForm';
 import Comment from './Comment';
+import AcceptedUser from './AcceptedUser';
 import {connect} from 'react-redux';
+import addIssue from '../actions/addIssue';
 class IssueCard extends Component{
     constructor(){
         super()
@@ -19,8 +21,17 @@ class IssueCard extends Component{
                 'Authorization': `Bearer ${localStorage.getItem("jwt")}`
             }
         }).then(response => response.json())
-        .then(json => this.setState({issueData: json}))
+        .then(json => { console.log(json); this.setState({issueData: json})})
     }
+
+    addIssue =(event)=>{
+        let issueData = {
+          user_id: this.props.user.id,
+          community_event_id: this.state.issueData.id
+        }
+    
+        this.props.addIssue(event, issueData, this.props.history)
+      }
 
     handlePost =(event, comment)=>{
         const newComment={
@@ -32,23 +43,45 @@ class IssueCard extends Component{
 
     render(){
         return(
-            <div>
+            <div className="issue-page">
                 <center>
-                    <img className="issue-page-image" src={this.state.issueData.media_url}></img>
-                    <h1>{this.state.issueData.title}</h1>
-                    <h2>{this.state.issueData.id && this.state.issueData.service_details.replace(/_/g, " ")}</h2>
-                    <h2>Complaint made: {this.state.issueData.id && this.state.issueData.created_at.slice(0, 10)}</h2>
-                     <h2>{this.state.issueData.district}</h2>
-                     <h4>{this.state.issueData.address}</h4>
-                     <h2>status: {this.state.issueData.status}</h2>
-                     
-                     <h4>Comments</h4>
-        <ul>{this.state.issueData.id && this.state.issueData.comments.length > 0 ? this.state.issueData.comments.map(comment => <Comment data={comment} />) : <p>looks like there are no comments... be the first!</p>}
-                         
-                     </ul>
+                    <div className="issue-scroll">
+                    <div className="issue-page-container">
+                        <img className="issue-page-img" src={this.state.issueData.media_url}></img>
+                        <h1 className="issue-page-title">{this.state.issueData.title}</h1>
+                        {this.props.userEvents.filter(issue => issue.id === this.state.issueData.id).length===1 && this.state.issueData.status === "Accepted" ? <p className="oops-page">already addedd</p> : 
+            this.state.issueData.status === "Closed" ? <p className="oops-page">already completed</p> :<button onClick={this.addIssue}className="issue-page-button">Add To Que</button>}
+                        <p className="issue-page-details">{this.state.issueData.id && this.state.issueData.service_details.replace(/_/g, " ")}</p>
                         
-                </center>
-                <NewCommentForm handlePost={this.handlePost} issueId={this.state.issueData.id}/>
+                        
+                        <p className="issue-page-address">{this.state.issueData.address}</p>
+                        <p className="issue-page-district">{this.state.issueData.district}</p>
+                        <p className="issue-page-date">Complaint made: {this.state.issueData.id && this.state.issueData.created_at.slice(0, 10)}</p>
+                        <p className="issue-page-status">status: {this.state.issueData.status}</p>
+                     </div>
+                     </div>
+                     </center>
+                     <div className="other-container">
+                     <div className="users-going">
+                        {this.state.issueData.id && this.state.issueData.users.length === 0? <p className="nobody">Nobody has signed up to help. Add to que and become the first!</p> :
+                        this.state.issueData.id && this.state.issueData.users.map(user => <AcceptedUser userData={user}/>)}
+                     </div>
+                    
+                     <br></br>
+                     <div className="comments-container">
+                     <h4 className="comment-title">Comments</h4>
+                     <br></br>
+                         <div className="all-comments">
+                     
+        <div>{this.state.issueData.id && this.state.issueData.comments.length > 0 ? this.state.issueData.comments.map(comment => <Comment data={comment} />) : <p className="nobody">looks like there are no comments... be the first!</p>}
+                         
+        </div>
+                     </div>
+                     <NewCommentForm handlePost={this.handlePost} issueId={this.state.issueData.id}/>
+                     </div>
+                     </div> 
+                
+                
             </div>
         )
     }
@@ -56,8 +89,15 @@ class IssueCard extends Component{
 
 const mapStateToProps =(state)=>{
     return{
-        user: state.user.currentUser
+        user: state.user.currentUser,
+        userEvents: state.user.userEvents
     }
 }
 
-export default connect(mapStateToProps, null)(IssueCard)
+const mapDispatchToProps =(dispatch) => {
+    return{
+        addIssue: (event, issueData, history) => {dispatch(addIssue(event, issueData, history))}
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(IssueCard)

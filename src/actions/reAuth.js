@@ -13,7 +13,7 @@ const reAuth =(history)=>{
           .catch((error) => {
             
             if (error) {
-            return window.alert('Turn on the server dumbass') 
+            console.log("turn on your server")
           }
           else {
           return window.alert("Oh my. Something has gone terribly wrong.")
