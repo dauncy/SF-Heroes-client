@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Profile from './components/Profile';
-
+// import dotenv from 'dotenv';
 import reAuth from './actions/reAuth';
 import MapParent from './components/MapParent';
 import IssueCard from './components/IssueCard'
@@ -19,7 +19,7 @@ class App extends Component{
   
   componentDidMount() {
    this.props.reAuth()
-   
+  
   }
 
   

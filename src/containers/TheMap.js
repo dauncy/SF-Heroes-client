@@ -23,6 +23,8 @@ class TheMap extends Component {
     }
   }
 
+  
+
   componentWillUpdate(){
     this.onClose()
   }
@@ -135,7 +137,6 @@ class TheMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBBpytNyZsiY34dZ7ohAplb4wsxsIu7JLo'
+  apiKey: process.env.REACT_APP_API_KEY
 })(TheMap);
-
 
