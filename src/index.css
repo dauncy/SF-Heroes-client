@@ -311,6 +311,7 @@ html {
   grid-template-areas: 
   'img title'
   'img button'
+  'img button2'
   'details details'
   'address address'
   'status status';
@@ -321,16 +322,62 @@ html {
   min-width: 200px;
   border-radius: 20px;
 }
+
+.issue-card-button-page{
+  background: rgb(13, 140, 220);
+  text-align: center;
+  grid-area: button2;
+  top: 0;
+  width: 75%;
+  height: 75%;
+   padding-top: -1px;
+   padding-bottom: 1px;
+   border-radius: 8px;
+  
+   text-transform: uppercase;
+   color: white;
+   font-weight: 700;
+   letter-spacing: .4px;
+   border-style: none;
+}
+
+.issue-card-button-page2{
+  background: rgb(13, 140, 220);
+  text-align: center;
+  grid-area: button;
+  top: 0;
+  width: 75%;
+  height: 75%;
+   padding-top: 2px;
+   padding-bottom: 8px;
+   border-radius: 8px;
+  
+   text-transform: uppercase;
+   color: white;
+   font-weight: 700;
+   letter-spacing: .4px;
+   border-style: none;
+}
+
+.issue-card-button-page2:hover{
+  background-color: rgb(24, 114, 171)
+}
+
+.issue-card-button-page:hover{
+  background-color: rgb(24, 114, 171)
+}
+
 .issue-card-button{
   background: rgb(114, 240, 4);
  text-align: center;
+ grid-area: button;
  top: 0;
  width: 75%;
  height: 75%;
   padding-top: -1px;
   padding-bottom: 1px;
   border-radius: 8px;
-  grid-area: button;
+ 
   text-transform: uppercase;
   color: white;
   font-weight: 700;
@@ -349,7 +396,8 @@ html {
     height: 130px;
     object-fit: cover;
     left: 0;
-  
+    max-height: 130px;
+    max-width: 130px;
     margin: auto;
     
     padding: 10px;
@@ -421,7 +469,7 @@ html {
   grid-template-areas: 
   'users'
   'comments';
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 25% 75%;
 }
 
 .comment-card{
@@ -443,6 +491,39 @@ html {
   text-align: left;
   font-family: "SF Display";
   
+}
+
+.accepted-title{
+  font-family: "SF Display";
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 100%;
+ 
+}
+.user-scroll{
+ 
+  overflow-y: scroll;
+  height: 100%;
+  
+}
+
+.theUsers{
+ 
+  /* text-align: center; */
+ 
+}
+
+.prevent-squish{
+  margin-bottom: 5%;
+}
+
+.accepted-username{
+  font-family: "SF Display";
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 100%;
 }
 
 .all-comments{
@@ -521,7 +602,8 @@ position: absolute;
     height: 200px;
     object-fit: cover;
     left: 0;
-    
+    max-height: 200px;
+    max-width: 200px;;
     
 
     padding: 10px;
@@ -578,7 +660,15 @@ position: absolute;
 
 .users-going{
   grid-area: users;
-  text-align: center;
+  
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: flex;
+  overflow-y: scroll;
+  height: 100%; */
+  
 }
 
 .comments-container{
@@ -1459,23 +1549,26 @@ input[type="password"]
     top: 0;
 }
 
-/* .map{
-  width: 75%;
-} */
+
 
 .map-parent{
   display: grid;
   grid-template-columns: 25% 75%;
   background-color: #f8f8ff;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
  padding-top: 60px;
  
 }
 
 .filter{
- background-color: #f8f8ff;
- 
+  
+  grid-column: 1;
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+  height: 100%;
+  
 }
 
 #root > div > div > div:nth-child(2) > div > div.map > div > div:nth-child(1){
@@ -1596,10 +1689,10 @@ input[type="password"]
 }
 
 .search-button{
-  position: absolute;
+  
   background: rgb(114, 240, 4);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
@@ -1608,7 +1701,10 @@ input[type="password"]
   color: white;
   font-weight: 700;
   letter-spacing: .4px;
-  margin-left:8%
+  width: 50%;
+  align-items: center;
+  bottom: 0;
+  margin-left: 5%;
   
 }
 
@@ -1637,7 +1733,8 @@ input[type="password"]
     height: 125px;
     object-fit: cover;
     left: 0;
-  
+    max-height: 125px;
+    max-width: 125px !important;
     margin: auto;
     
     padding: 10px;

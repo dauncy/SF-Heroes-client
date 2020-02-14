@@ -18,7 +18,7 @@ const userReducer = (state = intitialState, action) => {
         case "EDIT_PROFILE":
             return {...state, currentUser: action.user}
         
-        case "DELET_PROFILE":
+        case "DELETE_PROFILE":
             return {...state, currentUser: {}}
 
         case "SET_USER_EVENTS":

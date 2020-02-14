@@ -13,6 +13,11 @@ class UserEvent extends Component{
         this.props.completeEvent(event, data, this.props.history)
     }
 
+    visitPage =(event)=>{
+        let slugId = this.props.data.id
+        this.props.history.push(`/issues/${slugId}`)
+    }
+
     render(){
         return(
             <div>
@@ -20,7 +25,9 @@ class UserEvent extends Component{
             <div className="issue-card">
                 <img className="issue-card-img"src={this.props.data.media_url}></img>
                 <h3 className="issue-card-title">{this.props.data.title}</h3>
-                {this.props.data.status === "Accepted" ? <button onClick={this.completeEvent} className="issue-card-button">Complete</button>: null}
+                {this.props.data.status === "Accepted" ? <><button onClick={this.completeEvent} className="issue-card-button">Complete</button>
+                <button className= "issue-card-button-page" onClick={this.visitPage}>issue page</button></>: (<button className= "issue-card-button-page2" onClick={this.visitPage}>issue page</button>)}
+                
                 <p className="issue-card-details">{this.props.data.service_details.replace(/_/g, " ")}</p>
                 <p className="issue-card-address">{this.props.data.address}</p>
                 {this.props.data.status === "Accepted" ? <p className="issue-card-date">Date Accepted: {this.props.data.updated_at.slice(0, 10)}</p> : 

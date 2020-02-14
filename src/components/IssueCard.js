@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import NewCommentForm from './NewCommentForm';
 import Comment from './Comment';
 import AcceptedUser from './AcceptedUser';
@@ -49,8 +49,8 @@ class IssueCard extends Component{
                     <div className="issue-page-container">
                         <img className="issue-page-img" src={this.state.issueData.media_url}></img>
                         <h1 className="issue-page-title">{this.state.issueData.title}</h1>
-                        {this.props.userEvents.filter(issue => issue.id === this.state.issueData.id).length===1 && this.state.issueData.status === "Accepted" ? <p className="oops-page">already addedd</p> : 
-            this.state.issueData.status === "Closed" ? <p className="oops-page">already completed</p> :<button onClick={this.addIssue}className="issue-page-button">Add To Que</button>}
+                        {this.props.userEvents.filter(issue => issue.id === this.state.issueData.id).length===1 && this.state.issueData.status === "Accepted" ? <p className="oops-page">already added</p> : 
+            this.state.issueData.status === "Closed" ? <p className="oops-page">already completed</p> :<button onClick={this.addIssue}className="issue-page-button">Add To Queue</button>}
                         <p className="issue-page-details">{this.state.issueData.id && this.state.issueData.service_details.replace(/_/g, " ")}</p>
                         
                         
@@ -63,8 +63,9 @@ class IssueCard extends Component{
                      </center>
                      <div className="other-container">
                      <div className="users-going">
-                        {this.state.issueData.id && this.state.issueData.users.length === 0? <p className="nobody">Nobody has signed up to help. Add to que and become the first!</p> :
-                        this.state.issueData.id && this.state.issueData.users.map(user => <AcceptedUser userData={user}/>)}
+                         {this.state.issueData.id && this.state.issueData.status === "Accepted" ? <h6 className="accepted-title">issue accepted by:</h6> : this.state.issueData.id && this.state.issueData.status === "Closed" ? <h6 className="accepted-title">issue completed by:</h6> : null}
+                        {this.state.issueData.id && this.state.issueData.users.length === 0? <p className="nobody">Nobody has signed up to help. Add to que and become the first!</p> : <ul className="user-scroll">{
+                        this.state.issueData.id && this.state.issueData.users.map(user => <li><AcceptedUser status={this.state.issueData.status} userData={user}/></li>)}<br></br></ul>}
                      </div>
                     
                      <br></br>

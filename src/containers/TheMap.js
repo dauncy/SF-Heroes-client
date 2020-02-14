@@ -10,7 +10,7 @@ const mapStyles = {
 const containerStyle = {
   position: 'absolute',  
   width: '75%',
-  height: '100%'
+  height: '95%'
 }
 
 class TheMap extends Component {
@@ -23,7 +23,11 @@ class TheMap extends Component {
     }
   }
 
-  
+  componentDidUpdate(){
+    let markers = this.props.data && this.props.data.map(object => 
+      ({title: object.title, position:{lat: object["latitude"],
+    lng: object["longitude"]}}))
+  }
 
   componentWillUpdate(){
     this.onClose()
@@ -47,6 +51,22 @@ class TheMap extends Component {
     }
   };
 
+
+
+  adjustMap(mapProps, map) {
+    const {google, markers} = mapProps;
+    const bounds = new google.maps.LatLngBounds();
+  
+    markers && markers.forEach(marker => {
+      const {lat, lng} = marker.position;
+  
+      bounds.extend(new google.maps.LatLng(lat, lng));
+    });
+  
+    map.fitBounds(bounds);
+    // map.panToBounds(bounds);
+  }
+
   handleClick=(event)=>{
     let slugId = this.state.selectedPlace.slugId
     
@@ -69,9 +89,10 @@ class TheMap extends Component {
     const status = {
       Accepted: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
       Closed: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
-      Open: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-        
-    }
+      Open: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
+      
+     
+      
     
 
     return (
@@ -80,6 +101,7 @@ class TheMap extends Component {
         containerStyle={containerStyle}
         google={this.props.google}
         zoom={14}
+       
         style={mapStyles}
         initialCenter={{
          lat: 37.7749,
@@ -118,8 +140,8 @@ class TheMap extends Component {
         <h4 >{this.state.selectedPlace.name}</h4>
         <button className="issuePage-button" onClick={this.handleClick}>Issue Page</button>
         <br></br>
-        <br></br>{this.props.userEvents.filter(issue => issue.id === this.state.selectedPlace.slugId).length===1 && this.state.selectedPlace.status === "Accepted" ? <p className="already">already addedd</p> : 
-            this.state.selectedPlace.status === "Closed" ? <p className="already">already completed</p> : <button id="addButton" onClick={this.addIssue} className="add-button">Add to Que</button> }
+        <br></br>{this.props.userEvents.filter(issue => issue.id === this.state.selectedPlace.slugId).length===1 && this.state.selectedPlace.status === "Accepted" ? <p className="already">already added</p> : 
+            this.state.selectedPlace.status === "Closed" ? <p className="already">already completed</p> : <button id="addButton" onClick={this.addIssue} className="add-button">Add to Queue</button> }
         </div>
          <p className="issue-details">{this.state.selectedPlace.serviceDetails && this.state.selectedPlace.serviceDetails.replace(/_/g, " ")}</p>
           <p className="issue-status">Status: {this.state.selectedPlace.status}</p>

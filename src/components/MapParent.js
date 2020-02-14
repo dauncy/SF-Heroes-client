@@ -19,7 +19,7 @@ class MapParent extends Component{
 
     render(){
         return(
-            <div >
+           
               
                 <div className="map-parent">
                <MapFilter/>
@@ -28,7 +28,7 @@ class MapParent extends Component{
                </div>
               
                </div>
-            </div> 
+           
         )
     }
 }

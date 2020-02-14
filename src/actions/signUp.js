@@ -20,9 +20,10 @@ const signUp = (event, userInput, history) => {
         }).then(response => response.json())
             .then(json => { console.log(json);
                 if(json.error){
-                    let message = document.getElementById("login-error")
+                    let message = document.getElementById("signupOops")
                     message.innerText = json.error;
-                    document.getElementById("signupOops").style.display = "none"
+                    message.style.color = "red"
+                    
                     
                 } else {
                     dispatch({ type: "SET_CURRENT_USER", user: json.user.data.attributes })

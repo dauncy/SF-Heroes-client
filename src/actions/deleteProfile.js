@@ -12,8 +12,8 @@ const deleteProfile = ( userId, history) => {
             
          } )
          .then(
-             dispatch({ type: "DELETE_USER"}),
-             localStorage.removeItem('jwt'))
+             dispatch({ type: "DELETE_PROFILE"}),
+             localStorage.clear('jwt'))
              .then(()=> {history.push('/')})
     }
 }

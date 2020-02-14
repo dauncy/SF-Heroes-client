@@ -7,7 +7,17 @@ class AcceptedUser extends Component{
 
     render(){
         return(
-            <div></div>
+            
+                <div className="theUsers">
+                    
+
+                    <div>
+                    <h6 className="accepted-username">{this.props.userData.username}</h6>
+                    
+                    </div>
+                    
+                </div>
+           
         )
     }
 }

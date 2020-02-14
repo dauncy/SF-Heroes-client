@@ -56,7 +56,7 @@ class Profile extends Component {
                             
                         {completedArray.length === 0 ?
                                 <h4 className="no-events">Looks like you have no completed events..</h4> :
-                                completedArray.map(issue => <UserEvent data={issue}/>) }
+                                completedArray.map(issue => <UserEvent history={this.props.history} data={issue}/>) }
                         </div>
                     </div>
                     <div className="settings">

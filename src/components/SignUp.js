@@ -32,7 +32,7 @@ class SignUp extends Component{
                 
                 <center>
                 <div className="signup-container">
-                <h3 id="signupOops" className="signup-title">Join The Community</h3>
+                {<h3 id="signupOops" className="signup-title">Join The Community</h3>}
                         <form onSubmit={(event) => {this.props.signUp(event, this.state, this.props.history)}}
                         className="signup-form">
                             <label className="signup-label">Name</label>
