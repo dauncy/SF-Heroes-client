@@ -53,6 +53,9 @@ componentWillReceiveProps(props){
   }
 
   onMarkerClick = (props, marker, event) =>{
+    if(this.state.showingInfoWindow){
+      this.onClose()
+    }
     console.log(props, marker)
     this.setState({
       selectedPlace: props,
