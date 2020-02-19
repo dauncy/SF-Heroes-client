@@ -9,20 +9,32 @@ class MapParent extends Component{
     constructor(){
         super()
         this.state={
-
+            dipsplayMap: [ ],
+            centerLat: 37.7749,
+            centerLong: -122.4194,
+            zoom: 14
         }
     }
     
-    componentDidMount(){
-       
+    componentWillReceiveProps(props){
+        this.setState({displayMap: props.displayMap})
     }
+   componentDidUpdate(){
+      this.props.displayMap && this.autoZoom()
+       
+   }
+
+    autoZoom =() =>{ 
+        console.log("hi", this.props.displayMap[0])
+        
+   }
 
     render(){
         return(
            
               
                 <div className="map-parent">
-               <MapFilter/>
+               <MapFilter />
                 <div className="map">
                 <TheMap userEvents={this.props.userEvents} addIssue={this.props.addIssue} data={this.props.displayMap} history={this.props.history} user={this.props.user}/>
                </div>

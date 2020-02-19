@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import InfoWindowEx  from '../components/InfoWindowEx.js'
 
 const mapStyles = {
@@ -19,17 +19,36 @@ class TheMap extends Component {
     this.state = {
       showingInfoWindow: false,  
       activeMarker: {},          
-      selectedPlace: {}    
+      selectedPlace: {},
+      bounds: null   
     }
   }
 
   componentDidUpdate(){
-    let markers = this.props.data && this.props.data.map(object => 
-      ({title: object.title, position:{lat: object["latitude"],
-    lng: object["longitude"]}}))
+    
+       
   }
+componentWillReceiveProps(props){
+  props.data && this.autoZoom(props)
+}
+   autoZoom =(props) =>{ 
+       console.log("hi", props.data[0])
+       let items = props.data && props.data[0].map(object => 
+        ({lat: object["latitude"],
+      lng: object["longitude"]}))
+      let bounds = new this.props.google.maps.LatLngBounds();
+      for (let i = 0; i < items.length; i++) {
+        bounds.extend(items[i]);
+      }
+      this.setState({bounds: bounds})
+       
+  }
+    
+    
+  
 
   componentWillUpdate(){
+   
     this.onClose()
   }
 
@@ -53,19 +72,7 @@ class TheMap extends Component {
 
 
 
-  adjustMap(mapProps, map) {
-    const {google, markers} = mapProps;
-    const bounds = new google.maps.LatLngBounds();
   
-    markers && markers.forEach(marker => {
-      const {lat, lng} = marker.position;
-  
-      bounds.extend(new google.maps.LatLng(lat, lng));
-    });
-  
-    map.fitBounds(bounds);
-    // map.panToBounds(bounds);
-  }
 
   handleClick=(event)=>{
     let slugId = this.state.selectedPlace.slugId
@@ -101,13 +108,13 @@ class TheMap extends Component {
         containerStyle={containerStyle}
         google={this.props.google}
         zoom={14}
-       
+        ref={(ref) => {this.map = ref}}
         style={mapStyles}
         initialCenter={{
          lat: 37.7749,
          lng: -122.4194 }}
-         
-        
+         onLoad={this.handleLoad}
+        bounds={this.state.bounds}
         >
           {this.props.data && this.props.data[0].map(object => 
          
