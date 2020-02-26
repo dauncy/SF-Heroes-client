@@ -1,4 +1,4 @@
-**SF Heroes Frontend***
+**SF Heroes Frontend**
 
 SF Heroes is a React web app for users to notify and respond to neighborhood concerns. Users can participate in community led discussions, and volunteer to proactivly address SF 311-type issues.
 
